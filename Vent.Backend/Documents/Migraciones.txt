@@ -1,9 +1,9 @@
 ﻿-----------
 migraciones
 -----------
-	add-migration dbInicial
+	add-migration dbInicial -project Vent.Backend
 
-	update-database
+	update-database -project Vent.Backend
 
 --------------------	
 eliminar migraciones

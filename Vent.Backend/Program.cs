@@ -27,12 +27,21 @@ builder.Services.AddSwaggerGen(c =>
 
 //opt.UseLazyLoadingProxies();
 
-builder.Services.AddDbContext<DataContext>(opt =>
+//builder.Services.AddDbContext<DataContext>(opt =>
+//{
+//opt.UseSqlServer(
+//    builder.Configuration.GetConnectionString("CnLocalConnectionSqlServer"),
+//    sqlServerOptions => sqlServerOptions.CommandTimeout(0));
+//});
+
+builder.Services.AddDbContext<DataContext>(options =>
 {
-    opt.UseSqlServer(
-        builder.Configuration.GetConnectionString("CnLocalConnectionSqlServer"),
-        sqlServerOptions => sqlServerOptions.CommandTimeout(0)
-        );
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CnLocalConnectionSqlServer"),
+        sqlServerOptions =>
+        {
+            sqlServerOptions.CommandTimeout(0);
+            sqlServerOptions.MigrationsAssembly("Vent.Backend");
+        });
 });
 
 builder.Services.AddTransient<SeedDb>();
