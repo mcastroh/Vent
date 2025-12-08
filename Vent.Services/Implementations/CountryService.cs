@@ -1,6 +1,7 @@
 ﻿using Vent.Repositories.Interfaces;
 using Vent.Services.Interfaces;
-using Vent.Shared.Entities;
+using Vent.Shared.Dtos;
+using Vent.Shared.Responses;
 
 namespace Vent.Services.Implementations;
 
@@ -13,9 +14,6 @@ public class CountryService : ICountryService
         _countryRepository = countryRepository;
     }
 
-    public async Task<IEnumerable<Country>> GetAsync()
-        => await _countryRepository.GetAsync();
-
-    public async Task<IEnumerable<Country>> GetAllAsync()
-        => await _countryRepository.GetAllAsync();
+    public async Task<Response> GetAsync(PaginationDto pagination)
+        => await _countryRepository.GetAsync(pagination);
 }

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
 using Vent.Frontend;
+using Vent.Frontend.Repositories;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -17,4 +18,5 @@ void ConfigureServices(IServiceCollection services)
 {
     builder.Services.AddLocalization();
     builder.Services.AddMudServices();
+    builder.Services.AddScoped<IRepository, Repository>();
 }

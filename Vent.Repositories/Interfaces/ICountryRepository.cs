@@ -1,10 +1,9 @@
-﻿using Vent.Shared.Entities;
+﻿using Vent.Shared.Dtos;
+using Vent.Shared.Responses;
 
 namespace Vent.Repositories.Interfaces;
 
 public interface ICountryRepository
 {
-    Task<IEnumerable<Country>> GetAsync();
-
-    Task<IEnumerable<Country>> GetAllAsync();
+    Task<Response> GetAsync(PaginationDto pagination);
 }

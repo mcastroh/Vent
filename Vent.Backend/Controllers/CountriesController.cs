@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Vent.Services.Interfaces;
+using Vent.Shared.Dtos;
 using Vent.Shared.Entities;
 
 namespace Vent.Backend.Controllers;
@@ -16,16 +17,17 @@ public class CountriesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Country>>> GetAsync()
+    public async Task<ActionResult<IEnumerable<Country>>> GetAsync([FromQuery] PaginationDto pagination)
     {
-        var countryList = await _countryService.GetAsync();
-        return Ok(countryList);
-    }
+        var response = await _countryService.GetAsync(pagination);
 
-    [HttpGet("getAll")]
-    public async Task<ActionResult<IEnumerable<Country>>> GetAllAsync()
-    {
-        var countryList = await _countryService.GetAllAsync();
-        return Ok(countryList);
+        if (response.IsSuccess)
+        {
+            var lista = (List<Country>)response.Result!;
+            Response.Headers.Append("conteo", response.CountItem.ToString());
+            return Ok(lista);
+        }
+
+        return BadRequest("Error de Lectura.");
     }
 }

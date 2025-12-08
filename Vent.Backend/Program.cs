@@ -43,6 +43,30 @@ builder.Services.AddScoped<ICountryService, CountryService>();
 
 builder.Services.AddScoped<IApiService, ApiService>();
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("CorsPolicy", builder =>
+//    {
+//        builder.WithOrigins("https://localhost:7208/")  // dominio App Blazor  AllowAnyOrigin()
+//               .AllowAnyHeader()
+//               .AllowAnyMethod()
+//               //.SetIsOriginAllowed(origin => true)
+//               .WithExposedHeaders(new string[] { "Totalpages", "conteo" });
+//    });
+//});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+               .SetIsOriginAllowed(origin => true)
+               .WithExposedHeaders(new string[] { "Totalpages", "conteo" });
+    });
+});
+
 var app = builder.Build();
 
 SeedData(app);
@@ -71,6 +95,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

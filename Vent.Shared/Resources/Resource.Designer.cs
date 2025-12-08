@@ -70,6 +70,24 @@ namespace Vent.Shared.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Clean.
+        /// </summary>
+        public static string Clean {
+            get {
+                return ResourceManager.GetString("Clean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Code Phone.
+        /// </summary>
+        public static string CodePhone {
+            get {
+                return ResourceManager.GetString("CodePhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Countries.
         /// </summary>
         public static string Countries {
@@ -79,11 +97,47 @@ namespace Vent.Shared.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Filter.
+        /// </summary>
+        public static string Filter {
+            get {
+                return ResourceManager.GetString("Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Home.
         /// </summary>
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Please wait....
+        /// </summary>
+        public static string PleaseWait {
+            get {
+                return ResourceManager.GetString("PleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Search....
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
             }
         }
         
