@@ -1,4 +1,10 @@
 ﻿------------------------------------------------------------------------------------
+gitHub Desktop (ver escritorio)		=> Para subir los cambios a GitHub 
+	
+	login a gitHub (ver los cambios)	=> https://github.com/
+											email: m_castrohinostroza@hotmail.com
+											clave: tana_0218_hoy
+------------------------------------------------------------------------------------
 GitHub
 	=>	https://github.com/mcastroh/Vent/tree/master/Vent.Shared/Entities
 
@@ -6,12 +12,6 @@ GitHub
 Como crear y agregar un proyecto a Github desde Visual Studio
 	=> 	https://www.youtube.com/watch?v=edzItA766mA
 
-------------------------------------------------------------------------------------
-gitHub Desktop (ver escritorio)		=> Para subir los cambios a GitHub 
-	
-	login a gitHub (ver los cambios)	=> https://github.com/
-											email: m_castrohinostroza@hotmail.com
-											clave: tana_0218_hoy
 ------------------------------------------------------------------------------------
 Create a new repository	
 	mcastroh/AppSales

@@ -11,10 +11,3 @@ Guia - Semestre Actual
 	https://docs.google.com/document/d/1A0fovA9EC73Ujt4AyEvk4fSKl6uRYv97lGAxuH_OslM/edit?pli=1&tab=t.0#heading=h.8naxs9qz8kty
 
 ---------------------------------------------------------------------------------------
-
-
-una cambio en rama workingday
-
-final salvar en workingday
-
-enviar a la rama main
