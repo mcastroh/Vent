@@ -1,0 +1,28 @@
+﻿
+Instalar paquetes (nuget)
+	MudBlazor 	 
+	Microsoft.Extensions.Localization
+
+
+Instalar Extensiones
+	=> ResXManager .. permite manejar los recursos en varios idiomas desde el recurso principal 
+ 
+---------------------------------------------------------------------------------------
+Documentación de MudBlazor
+	=> https://mudblazor.com/docs/overview
+---------------------------------------------------------------------------------------
+En wwwroot, editar el index.html
+	<head>   
+
+		<link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+	</head>	
+	<body>
+
+		<script src="_content/MudBlazor/MudBlazor.min.js"></script>
+	</body>
+
+---------------------------------------------------------------------------------------
+Iconos, Fonts de google
+	=> https://fonts.google.com/
+
+---------------------------------------------------------------------------------------
