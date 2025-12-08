@@ -1,0 +1,12 @@
+﻿
+Arquitectura Limpia
+ (6 videos)	=>	https://www.youtube.com/playlist?list=PLDNoyuGg6hYcLwH0Ym9i3gZwHc1AH_o_w
+
+
+Arquitectura Limpia 1 - Creando el Proyecto
+	Autor: Hebelmart
+		=>	https://www.youtube.com/watch?v=meC14_nFaXQ
+
+Arquitectura Limpia 2 - Implementando MudBlazor	
+	Autor: Hebelmart
+		=>	https://www.youtube.com/watch?v=Fi9FTngisso&t=5s

@@ -1,0 +1,11 @@
+﻿
+EF Core - Dos Llaves Foráneas a la Misma Tabla - Manejando el NULL - API Fluente
+	=>	https://www.youtube.com/watch?v=bz9ZVKyY5SY
+
+
+Generic repository pattern with unit of work in asp.net core web api
+	=>	https://www.youtube.com/watch?v=VQPOVH9h064		
+	=>	https://www.youtube.com/playlist?list=PL1aIUnd4YHM0QIr-YWMoj84A27aFOeBYN	
+	=>	https://www.google.com/search?q=c%23+instalar+entity+framework+sql+server&rlz=1C1CHBF_esPE1059PE1059&oq=c%23+instalar+entity+framework+sql+server&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEKMjY2ODNqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:11184361,vid:ZLj0mo60KPQ,st:0
+			
+

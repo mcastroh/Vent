@@ -1,0 +1,8 @@
+﻿Instalar en el BackEnd segun el orden
+
+1. Microsoft.EntityFrameworkCore
+2. Microsoft.EntityFrameworkCore.SqlServer
+3. Microsoft.EntityFrameworkCore.SqlServer
+4. Newtonsoft.Json
+5. Microsoft.AspNetCore.Authentication.JwtBearer
+6. Swashbuckle.AspNetCore => (swagger)

@@ -1,0 +1,11 @@
+﻿
+Paginación, búsqueda y ordenación en un Web API de ASP.NET
+	=>	https://www.rafaelacosta.net/Blog/2019/7/27/paginaci%C3%B3n-b%C3%BAsqueda-y-ordenaci%C3%B3n-en-un-web-api-de-aspnet
+
+
+ 
+Revisar si hubo cambio en github desde la nueva rama WorkingDay
+
+Final
+
+no pasa	

@@ -1,0 +1,16 @@
+﻿-----------
+migraciones
+-----------
+	add-migration dbInicial
+
+	update-database
+
+--------------------	
+eliminar migraciones
+--------------------
+	remove-migration
+
+-----------
+elimina DB
+----------
+	drop-database

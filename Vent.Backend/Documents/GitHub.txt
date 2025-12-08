@@ -1,0 +1,56 @@
+﻿------------------------------------------------------------------------------------
+GitHub
+	=>	https://github.com/mcastroh/Vent/tree/master/Vent.Shared/Entities
+
+------------------------------------------------------------------------------------
+Como crear y agregar un proyecto a Github desde Visual Studio
+	=> 	https://www.youtube.com/watch?v=edzItA766mA
+
+------------------------------------------------------------------------------------
+gitHub Desktop (ver escritorio)		=> Para subir los cambios a GitHub 
+	
+	login a gitHub (ver los cambios)	=> https://github.com/
+											email: m_castrohinostroza@hotmail.com
+											clave: tana_0218_hoy
+------------------------------------------------------------------------------------
+Create a new repository	
+	mcastroh/AppSales
+	
+Description (optional):
+	App Sales
+
+Public
+	marcar opción
+	
+Add .gitignore			
+	gitignore template: VisualStudio
+
+En el Visual Studio
+-------------------
+  Copiar ruta del proyecto:
+	clic en mcastroh/AppSales
+	clic en boton <> Code y copiar ruta de clonación del proyecto
+		https://github.com/mcastroh/AppSales.git
+		 										
+------------------------------------------------------------------------------------
+Como eliminar de github un repositorio
+	=>	https://www.google.com/search?q=como+eliminar+de+github+un+repositorio&rlz=1C1CHBF_esPE1059PE1059&oq=como+eliminar+de+github+un+repositorio&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMgoIAxAAGIAEGKIEMgcIBBAAGO8FMgoIBRAAGIAEGKIEMgoIBhAAGIAEGKIE0gEKMTUxMDlqMGoxNagCCLACAfEFZURjPfDwIqM&sourceid=chrome&ie=UTF-8
+	
+
+------------------------------------------------------------------------------------
+Para eliminar el repositorio git local de una carpeta, debes encontrar y eliminar la .gitcarpeta que está almacenada dentro.
+
+Aquí se encuentra todo su repositorio, es decir, historial, ramas, etiquetas, etc.
+
+El código fuente de su proyecto se encuentra fuera de esta carpeta, por lo que eliminar la .gitcarpeta debería ser seguro según su pregunta.
+
+Tenga en cuenta que esta carpeta puede estar oculta, dependiendo de la configuración y del sistema operativo que esté utilizando, por lo que es posible que tenga que configurar Finder o el Explorador de Windows (o lo que sea) para mostrar los archivos y carpetas ocultos antes de poder verla.
+
+Tenga en cuenta que puede haber archivos almacenados fuera de la .gitcarpeta que podrían "pertenecer" al hecho de que solía haber un repositorio git allí, es decir, archivos como:
+
+.gitattributes
+.gitignore
+
+(nota, solo esos dos, no todos los archivos que comienzan con a .)
+
+Si cree que podría querer crear un nuevo repositorio git para su carpeta en una fecha posterior, estos archivos se pueden dejar solos de manera segura, pero probablemente no serán utilizados por nada más, por lo que si no tiene la intención de crear dicho repositorio, probablemente pueda eliminarlos también.
