@@ -1,0 +1,57 @@
+﻿<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
+ 
+<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />        
+
+    <MudTextField Label="@Localizer["Country"]"
+                  @bind-Value="@Country.Name"
+                  For="@(() => Country.Name)"
+                  Class="mb-4" />
+
+    <MudTextField Label="@Localizer["CodePhone"]"
+                  @bind-Value="@Country.CodePhone"
+                  For="@(() => Country.CodePhone)"
+                  Class="mb-4" />
+
+    @if (Country.CountryId != 0)
+    {      
+        <div class="my-2">
+            <MudToggleIconButton Toggled="Country.IsActive"
+                             ToggledChanged="OnToggledChanged"
+                Icon="@Icons.Material.Filled.Cancel"
+                Color="@Color.Error"
+                ToggledIcon="@Icons.Material.Filled.CheckCircle"
+                ToggledColor="@Color.Success"
+                                 title="@(Country.IsActive? @Localizer["Deactivate"] : @Localizer["Activate"])" />
+            <span>@isActiveMessage</span>
+        </div>
+    }
+     
+    <br />
+    <MudItem xs="12" sm="12">
+        <MudCardContent>           
+            <InputImg Label="@Localizer["Flag"]" ImageSelected="ImageSelected" ImageURL="@imageUrl" />
+            @if (!string.IsNullOrEmpty(Country.CountryFlag) && primeraVez)
+            {
+                <img src="data:image/png;base64, @imageUrl" />
+            }
+        </MudCardContent>
+    </MudItem>
+
+    <br />
+    <MudItem xs="12" sm="12">
+        <MudButton Variant="Variant.Outlined"
+                   StartIcon="@Icons.Material.Filled.ArrowBack"
+                   Color="Color.Tertiary"
+                   OnClick="ReturnAction">
+            @Localizer["Return"]
+        </MudButton>
+        <MudButton Variant="Variant.Outlined"
+                   StartIcon="@Icons.Material.Filled.Check"
+                   Color="Color.Primary"
+                   ButtonType="ButtonType.Submit">
+            @Localizer["SaveChanges"]
+        </MudButton>
+    </MudItem>
+</EditForm>
+ 

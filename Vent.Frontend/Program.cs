@@ -1,3 +1,4 @@
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
@@ -17,6 +18,7 @@ await builder.Build().RunAsync();
 void ConfigureServices(IServiceCollection services)
 {
     builder.Services.AddLocalization();
+    builder.Services.AddSweetAlert2();
     builder.Services.AddMudServices();
     builder.Services.AddScoped<IRepository, Repository>();
 }

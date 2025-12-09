@@ -20,7 +20,7 @@ public partial class IndexCountries
 
     private List<Country>? Countries { get; set; }
     private MudTable<Country> table = new();
-    private readonly int[] pageSizeOptions = { 2, 10, 25, 50, int.MaxValue };
+    private readonly int[] pageSizeOptions = { 10, 25, 50, int.MaxValue };
     private int totalRecords = 0;
     private bool loading;
     private const string baseUrl = "api/countries";

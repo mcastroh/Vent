@@ -1,5 +1,12 @@
-﻿<h3>EditCountries</h3>
-
-@code {
-
+﻿@if (Country is null)
+{
+    <Loading/>
+}
+else
+{
+    <MudDialog>
+        <DialogContent>
+            <FormCountry @ref="FormCountry" Country="Country" OnValidSubmit="EditAsync" ReturnAction="Return" />
+        </DialogContent>
+    </MudDialog>
 }

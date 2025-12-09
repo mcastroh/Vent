@@ -28,12 +28,27 @@ else
         </ToolBarContent>
         <HeaderContent>
             <MudTh>@Localizer["Country"]</MudTh>
-            <MudTh># @Localizer["Teams"]</MudTh>
+            <MudTh>@Localizer["CodePhone"]</MudTh>
+            <MudTh>@Localizer["Flag"]</MudTh>
+            <MudTh>@Localizer["IsActive"]</MudTh>         
             <MudTh>@Localizer["Actions"]</MudTh>
         </HeaderContent>
         <RowTemplate>
             <MudTd>@context.Name</MudTd>
             <MudTd>@context.CodePhone</MudTd>
+            <MudTd>
+                <MudImage Src="@($"data:image/png;base64,{@context.CountryImageFull}")" Width="30" Height="30" justify-content:center />
+            </MudTd>
+            <MudTd>
+                @if (context.IsActive)
+                {
+                    <MudIcon Icon="@Icons.Material.Filled.CheckCircle" Color="Color.Success" />
+                }
+                else
+                {
+                    <MudIcon Icon="@Icons.Material.Filled.Cancel" Color="Color.Error" />
+                }
+            </MudTd>
             <MudTd>
                 <MudTooltip Text="@Localizer["Edit"]">
                     <MudButton Variant="Variant.Filled"

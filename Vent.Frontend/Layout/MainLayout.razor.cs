@@ -11,7 +11,7 @@ public partial class MainLayout
     private bool _darkMode { get; set; } = true;
     private string _icon = Icons.Material.Filled.DarkMode;
 
-    [Inject] private IStringLocalizer<Resource> localizer { get; set; } = null!;
+    [Inject] private IStringLocalizer<Resource> Localizer { get; set; } = null!;
 
     private void DrawerToggle()
     {
