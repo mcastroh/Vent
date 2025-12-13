@@ -1,5 +1,8 @@
-﻿<MudDialog>
+﻿@page "/countries/create"
+
+<MudDialog>
     <DialogContent>
         <FormCountry @ref="FormCountry" Country="Country" OnValidSubmit="CreateAsync" ReturnAction="Return" />
     </DialogContent>
 </MudDialog>
+ 

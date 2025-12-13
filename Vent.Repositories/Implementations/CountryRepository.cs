@@ -55,7 +55,7 @@ public class CountryRepository : ICountryRepository
 
     public async Task<Response> GetAsync(PaginationDto pagination)
     {
-        var queryable = _context.Countries.Include(s => s.States).AsQueryable();
+        var queryable = _context.Countries.Include(s => s.States).AsNoTracking().AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(pagination.Filter))
             queryable = queryable.Where(x => x.Name.ToLower().Contains(pagination.Filter.ToLower()));
@@ -74,7 +74,7 @@ public class CountryRepository : ICountryRepository
 
     public async Task<Response> GetByIdAsync(int id)
     {
-        var result = await _context.Countries.FindAsync(id);
+        var result = await _context.Countries.AsNoTracking().FirstOrDefaultAsync(x => x.CountryId == id);
         if (result == null) return new Response() { IsSuccess = false, Message = "ERR001" };
         return new Response() { IsSuccess = true, Result = result };
     }

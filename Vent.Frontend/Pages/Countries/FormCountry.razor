@@ -1,8 +1,8 @@
-﻿<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
- 
+﻿
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
 <EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />        
-
+   
     <MudTextField Label="@Localizer["Country"]"
                   @bind-Value="@Country.Name"
                   For="@(() => Country.Name)"
@@ -35,9 +35,9 @@
             {
                 <img src="data:image/png;base64, @imageUrl" />
             }
-        </MudCardContent>
+        </MudCardContent> 
     </MudItem>
-
+     
     <br />
     <MudItem xs="12" sm="12">
         <MudButton Variant="Variant.Outlined"
@@ -51,7 +51,6 @@
                    Color="Color.Primary"
                    ButtonType="ButtonType.Submit">
             @Localizer["SaveChanges"]
-        </MudButton>
+        </MudButton> 
     </MudItem>
 </EditForm>
- 

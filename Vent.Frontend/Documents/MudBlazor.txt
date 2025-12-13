@@ -26,3 +26,16 @@ Iconos, Fonts de google
 	=> https://fonts.google.com/
 
 ---------------------------------------------------------------------------------------
+Inyeccion de dependencia desde el constructor de una pagina
+
+	private readonly IRepository _repository;
+
+    public IndexCountries(IRepository repository)
+    {
+        _repository = repository;
+    }
+
+	Uso..
+		 var responseHttp = await _repository.GetAsync<List<Country>>(url);
+		
+		 

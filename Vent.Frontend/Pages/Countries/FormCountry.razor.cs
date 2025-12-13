@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.Extensions.Localization;
+using Microsoft.JSInterop;
 using Vent.Shared.Entities;
 using Vent.Shared.Resources;
 
@@ -18,6 +19,7 @@ public partial class FormCountry
 
     [Inject] private IStringLocalizer<Resource> Localizer { get; set; } = null!;
     [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
+    [Inject] private IJSRuntime JSRuntime { get; set; } = null!;
 
     public bool FormPostedSuccessfully { get; set; } = false;
     private bool primeraVez = true;
@@ -46,9 +48,8 @@ public partial class FormCountry
         {
             Title = Localizer["Confirmation"],
             Text = Localizer["LeaveAndLoseChanges"],
-            Icon = SweetAlertIcon.Warning,
-            ShowCancelButton = true,
-            CancelButtonText = Localizer["Cancel"]
+            Icon = SweetAlertIcon.Question,
+            ShowCancelButton = true
         });
 
         var confirm = !string.IsNullOrEmpty(result.Value);

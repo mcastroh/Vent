@@ -9,3 +9,12 @@ Generic repository pattern with unit of work in asp.net core web api
 	=>	https://www.google.com/search?q=c%23+instalar+entity+framework+sql+server&rlz=1C1CHBF_esPE1059PE1059&oq=c%23+instalar+entity+framework+sql+server&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEKMjY2ODNqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:11184361,vid:ZLj0mo60KPQ,st:0
 			
 
+Desde una lista de product generar un dto mediante Select
+
+  var productos = _repo.ObtenerProductos();
+            var datos = productos.Select(p => new ProductoDTO
+            {
+                Id = p.Id,
+                Nombre = p.Nombre,
+                Precio = p.Precio
+            }).ToList();

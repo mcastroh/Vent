@@ -1,0 +1,64 @@
+﻿@page "/prueba01"
+
+@using Microsoft.AspNetCore.Components.Routing
+@inject IJSRuntime JS
+
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
+
+<EditForm Model="myFormModel" OnValidSubmit="HandleValidSubmit">
+    <InputText @bind-Value="myFormModel.Name" />
+    <button type="submit">Guardar</button>
+</EditForm>
+
+@code {
+    private MyFormModel myFormModel = new();
+    private bool isDirty = false; // Para rastrear cambios
+
+    // Define el modelo de tu formulario
+    public class MyFormModel
+    {
+        public string Name { get; set; }
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Suscribe un evento para detectar cambios en el formulario
+            // (Aquí podrías añadir lógica para detectar si los campos han cambiado)
+            // Por simplicidad, asumiremos que cambia si el nombre no es null
+            if (!string.IsNullOrEmpty(myFormModel.Name))
+            {
+                isDirty = true;
+            }
+        }
+    }
+
+    private async Task OnBeforeInternalNavigation(LocationChangingContext context)
+    {
+        // Solo bloquea si hay cambios sin guardar (isDirty es true)
+        if (isDirty)
+        {
+            // Llama a JavaScript para mostrar un diálogo de confirmación
+            var result = await JS.InvokeAsync<bool>("confirm", "Tienes cambios sin guardar. ¿Estás seguro de que quieres salir?");
+
+            if (result)
+            {
+                // El usuario confirmó, permite la navegación
+                isDirty = false; // Resetea el estado de 'sucio'
+            }
+            else
+            {
+                // El usuario canceló, previene la navegación
+                context.PreventNavigation();
+                // No reseteamos isDirty aquí, porque el usuario quiere quedarse
+            }
+        }
+    }
+
+    private void HandleValidSubmit()
+    {
+        // Lógica para guardar el formulario
+        isDirty = false; // Resetea el estado una vez guardado
+    }
+}
